@@ -1,0 +1,8 @@
+# Compiled output
+bin/main
+bin/*.exe
+bin/*.out
+
+# OS clutter
+.DS_Store
+Thumbs.db
