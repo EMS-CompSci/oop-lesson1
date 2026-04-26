@@ -1,0 +1,19 @@
+{
+  "name": "AQA OOP C++ — Lesson 1",
+  "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-22.04",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "xaver.clang-format"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.default.cppStandard": "c++17",
+        "editor.fontSize": 14,
+        "terminal.integrated.fontSize": 14
+      }
+    }
+  },
+  "postCreateCommand": "mkdir -p bin && echo 'Ready. Press Ctrl+Shift+B to build and run.'"
+}
