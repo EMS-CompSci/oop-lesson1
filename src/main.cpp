@@ -1,16 +1,13 @@
 // ============================================================
-//  Lesson 1: Classes, Objects and Instantiation
-//  AQA A-Level Computer Science — Object-Oriented Programming
-// ============================================================
+//  CLASSES + OBJECTS
+// ==========================================================
 //
-//  LEARNING OBJECTIVES
-//  By the end of this lesson you should be able to:
-//    1. Explain what a class is and how it differs from an object
-//    2. Identify the private and public sections of a class
-//    3. Create (instantiate) objects from a class
-//    4. Call methods on an object using dot notation
+//    1. Relationship between CLASSes and OBJECTs
+//    2. Access modifiers PRIVATE PROTECTED PUBLIC
+//    3. INSTANTIATION
+//    4. METHODS
 //
-//  HOW TO BUILD AND RUN
+//building and running this file
 //    Press Ctrl+Shift+B
 //    Output appears in the Terminal panel below.
 //
@@ -22,22 +19,22 @@
 // ============================================================
 //  BACKGROUND — read before you start coding
 //
-//  So far in programming you have used variables to store
-//  single values (int, double, string) and functions to
-//  perform actions.
 //
-//  Object-Oriented Programming (OOP) bundles related data
-//  and the actions that work on that data together into a
-//  single unit called a CLASS.
-//
-//  Think of a class as a BLUEPRINT and an object as something
-//  BUILT FROM that blueprint.
-//
-//  Blueprint (class):   Point
-//  Things built from it (objects):  p1, p2, p3 ...
+//  OOP bundles data with the actions on the data in a CLASS
+//  The data is referred to as ATTRIBUTES
+//  The actions, akin to functions are referred to as METHODS
+//  The BUNDLING achieves ENCAPSULATION of the data and actions.
+//  INFOMRATION HIDING is achoeved by ACCESS MODIFIERS.
+//  ACCESS MODIFIERS are either PRIVATE, PROTECTED, or PUBLIC
+//  CLASSES are akin to a BLUEPRINT
+//  OBJECTS of a class are CONSTRUCTED or INSTANTIATED from the class
+//  by executing/calling the CONSTRUCTOR of the CLASS
+// 
+//  In this example:
+//  CLASS, the BLUEPRINT is  Point
+//  OBJECTS are  p1, p2, p3 ...
 //
 //  Every object has its own copy of the data (attributes)
-//  but shares the same set of actions (methods).
 //
 // ============================================================
 
@@ -45,48 +42,29 @@
 // ============================================================
 //  THE Point CLASS
 //
-//  A Point represents a single location in 2D space.
-//  It stores an x-coordinate and a y-coordinate.
-//
 //  The class is divided into two sections:
 //
-//    private — data hidden from the outside world.
-//              Nothing outside this class can read or change
-//              these directly. This is called ENCAPSULATION.
+//    private — data hidden from the outside the class.
 //
 //    public  — actions the outside world is allowed to use.
 //              Methods listed here form the class INTERFACE.
-//
 // ============================================================
 
 class Point {
 
 private:
-    // ATTRIBUTES (member variables)
-    // Declared private — protected from direct outside access.
+    // ATTRIBUTES
     double x;
     double y;
 
 public:
-    // ----------------------------------------------------------
     //  CONSTRUCTOR
     //
-    //  A special method called automatically when an object
-    //  is created. Its job is to set the initial values of
-    //  all attributes.
-    //
     //  The constructor has the same name as the class.
-    //  It has no return type — not even void.
-    //
-    //  The ': x(initialX), y(initialY)' part is called an
-    //  INITIALISER LIST. It is the C++ way of setting
-    //  attribute values inside a constructor.
     // ----------------------------------------------------------
-    Point(double initialX, double initialY)
-        : x(initialX), y(initialY)
-    {
-        // The body can be left empty if the initialiser
-        // list does all the work.
+    Point(double initialX, double initialY) {
+        x = initialX;
+        y = initialY;
     }
 
     // ----------------------------------------------------------
@@ -109,12 +87,11 @@ public:
     }
 
     // ----------------------------------------------------------
-    //  toString()
-    //
+    //  METHOD toString()
     //  Returns a human-readable string describing this Point.
     //  std::to_string() converts a number to a string.
     // ----------------------------------------------------------
-    std::string toString() const {
+    std::string toString() {
         return "(" + std::to_string(x) + ", "
                    + std::to_string(y) + ")";
     }
@@ -217,7 +194,7 @@ int main() {
 
 
     // ----------------------------------------------------------
-    //  TODO 5 — Create your own Points and experiment
+    //  TODO 1 — Create your own Points and experiment
     //
     //  a) Create a Point p3 anywhere you like.
     //     Print its coordinates.
