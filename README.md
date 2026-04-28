@@ -1,5 +1,4 @@
 # oop-basics
-first lesson to teach oop to y12
 # Basics — Classes, Objects and Instantiation
 ### AQA A-Level Computer Science — Object-Oriented Programming in C++
 
@@ -89,3 +88,8 @@ Every object has its own copy of the data (attributes)
      and y variables, or do they each have their own?
      How can you tell?
 
+## Potentially new oncepts not related to OOP
+
+Working in the terminal.
+Namespace.
+Building a program.
