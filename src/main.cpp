@@ -1,18 +1,23 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
+//Class declaration
 class Point {
 
+//attributes
 private:
     double x;
     double y;
 
 public:
+    //constructor
     Point(double initialX, double initialY) {
-        x = initialX;
+        x = initialX; //in python self.x
         y = initialY;
     }
 
+    //getter methods
     double getX() const {
         return x;
     }
@@ -26,9 +31,13 @@ public:
                    + std::to_string(y) + ")";
     }
 
+    double distanceTo(Point anotherPoint){
+        
+    }
 
 
-};  
+
+}; //end of class declaration 
 
 
 int main() {
